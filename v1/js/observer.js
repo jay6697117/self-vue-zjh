@@ -1,3 +1,4 @@
+// Observer 类
 function Observer(data) {
   this.data = data;
   this.walk(data);
@@ -11,7 +12,7 @@ Observer.prototype = {
   },
   defineReactive: function (data, key, val) {
     var dep = new Dep();
-    var childObj = observe(val);
+    // var childObj = observe(val);
     Object.defineProperty(data, key, {
       enumerable: true,
       configurable: true,
